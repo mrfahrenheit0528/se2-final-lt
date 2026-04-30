@@ -82,7 +82,7 @@ deploy:
           username: ${{ secrets.SERVER_USER }}
           password: ${{ secrets.SERVER_PASSWORD }} 
           script: |
-            # 1. Force remove the old container
+            # 1. Force remove the old container s
             echo "${{ secrets.SERVER_PASSWORD }}" | sudo -S docker rm -f my-app || true
             
             # 2. Delete the old image to force a fresh download
